@@ -3,7 +3,7 @@ resource "aws_instance" "name" {
     key_name="demo"
     instance_type=var.instance_type
     tags={
-        Name="Demo"
+        Name="Terraform"
     }
 
   
