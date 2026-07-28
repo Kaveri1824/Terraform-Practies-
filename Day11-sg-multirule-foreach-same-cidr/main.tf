@@ -83,11 +83,12 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 #ec2 creation
-resource "aws_instance" "name" {
+resource "aws_instance" "name"{
     ami = "ami-01edba92f9036f76e"
     instance_type = "t3.micro"
     subnet_id = aws_subnet.name.id
     vpc_security_group_ids = [aws_security_group.allow_tls.id]
+    
   
 }
 #elastic ip
